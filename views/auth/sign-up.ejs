@@ -4,25 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sign Up</title>
+  <link rel="stylesheet" href="/styles/sign-up.css" />
 </head>
-<body>
-  <%- include('../partials/_navbar.ejs') %>
-  <h1>Create a new workout!</h1>
-  <form action="/auth/sign-up" method="POST">
-
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required />
-    
-    <label for="username">Username:</label>
-    <input type="text" name="username" id="username" required />
-   
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password" required />
-    
-    <label for="confirmPassword">Confirm Password:</label>
-    <input type="password" name="confirmPassword" id="confirmPassword" required />
-    
-    <button type="submit">Sign up</button>
-  </form>
+<body class="sign-up-page">
+  <!-- <%- include('../partials/_navbar.ejs') %> -->
+  <main class="sign-up-container">
+    <section class="form-section">
+      <h1>Create a New Account</h1>
+      <form action="/auth/sign-up" method="POST">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required />
+       
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required />
+        
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" name="confirmPassword" id="confirmPassword" required />
+        
+        <button type="submit">Sign Up</button>
+      </form>
+    </section>
+    <section class="image-section">
+      <img src="https://www.pngkey.com/png/full/256-2561718_want-to-learn-how-to-2x-your-muscle.png" alt="Sign Up Illustration" />
+    </section>
+  </main>
 </body>
 </html>

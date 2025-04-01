@@ -4,10 +4,6 @@ const router = express.Router();
 const User = require('../models/user.js');
 
 
-router.get('/', (req, res) => {
-  const user = req.session.user; // Assuming user is stored in the session
-  res.render('home', { user });
-});
 
 
 

@@ -4,16 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign In</title>
+  <link rel="stylesheet" href="/styles/sign-in.css">
 </head>
-<body>
-  <%- include('../partials/_navbar.ejs') %>
-  <h1>Sign in</h1>
-  <form action="/auth/sign-in" method="POST">
-    <label for="username">Username:</label>
-    <input type="text" name="username" id="username" required />
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password" required />
-    <button type="submit">Sign in</button>
-  </form>
+<body class="sign-in-page">
+  <!-- <%- include('../partials/_navbar.ejs') %> -->
+  <main class="sign-in-container">
+    <section class="form-section">
+      <h1>Sign In</h1>
+      <form action="/auth/sign-in" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required />
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required />
+        <button type="submit">Sign In</button>
+      </form>
+    </section>
+    <section class="image-section">
+      <img src="https://www.pngkey.com/png/full/256-2561718_want-to-learn-how-to-2x-your-muscle.png" alt="Sign In Illustration">
+    </section>
+  </main>
 </body>
 </html>

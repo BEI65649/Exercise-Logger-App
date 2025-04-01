@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Workout</title>
-    <link rel="stylesheet" href="/styles/main.css">
-</head>
-<body class="index-page">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add a New Workout</title>
+  </head>
+  <body>
     <%- include('../partials/_navbar.ejs') %>
-    <main class="workouts-container">
-        <header class="workouts-header">
     <h1>Add a New Workout</h1>
     <form action="/users/<%=user._id%>/workouts" method= "POST">
 
