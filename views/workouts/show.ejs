@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= workout.workoutType %> Workout</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+        <h1><%= workout.workoutType %> Workout</h1>
+        
+        <div>
+          <%= workout.workoutDuration %> minutes</p>
+          <%= workout.date.toDateString() %></p>
+        </div>
+  
+        <div>
+        <% if (workout.workoutDescription) { %>
+            <h3>Workout Notes:</h3>
+            <p><%= workout.workoutDescription %></p>
+        <% } %>
+  
+        <% if (workout.postingLink) { %>
+            <a href="<%= workout.postingLink %>" >View Video </a>
+        <% } %>
+      </div>
+
+        <div> 
+        <a href="/users/<%= user._id %>/workouts/<%= workout._id %>/edit">
+          Edit Workout
+        </a> 
+      </div>
+
+      <div> 
+   <form action="/users/<%= user._id %>/workouts/<%= workout._id %>?_method=DELETE" method="POST">
+  </div>
+    <button type="submit">Delete Workout </button>
+  </form>
+
+  </body>
+</html>

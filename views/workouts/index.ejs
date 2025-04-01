@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Workouts</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body class="index-page">
+    <%- include('../partials/_navbar.ejs') %>
+    <main class="workouts-container">
+        <header class="workouts-header">
+            <h1>User Workouts</h1>
+            <a class="add-workout-btn" href="/users/<%= user._id %>/workouts/new">Add a Workout</a>
+        </header>
+        <ul class="workouts-list">
+            <% workouts.forEach(workout => { %>
+                <li class="workout-item">
+                    <a href="/users/<%= user._id %>/workouts/<%= workout._id %>">
+                        <h2 class="workout-type"><%= workout.workoutType %></h2>
+                        <p class="workout-description"><%= workout.workoutDescription %></p>
+                        <p class="workout-duration"><%= workout.workoutDuration %> minutes</p>
+                        <p class="workout-date"><%= workout.workoutDate %></p>
+                    </a>
+                </li>
+            <% }) %>
+        </ul>
+    </main>
+</body>
+</html>
