@@ -4,38 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= workout.workoutType %> Workout</title>
+    <link rel="stylesheet" href="/styles/show.css" />
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
+    <main class="show-workout-container">
+      <section class="text-section">
         <h1><%= workout.workoutType %> Workout</h1>
-        
-        <div>
-          <%= workout.workoutDuration %> minutes</p>
-          <%= workout.date.toDateString() %></p>
-        </div>
-  
-        <div>
+        <p><%= workout.date.toDateString() %></p>
+        <p><%= workout.workoutDuration %> minutes</p>
+       
+
         <% if (workout.workoutDescription) { %>
-            <h3>Workout Notes:</h3>
-            <p><%= workout.workoutDescription %></p>
+          <h3>Workout Notes:</h3>
+          <p><%= workout.workoutDescription %></p>
         <% } %>
-  
+
         <% if (workout.postingLink) { %>
-            <a href="<%= workout.postingLink %>" >View Video </a>
+          <a href="<%= workout.postingLink %>" target="_blank">View Video</a>
         <% } %>
-      </div>
 
-        <div> 
-        <a href="/users/<%= user._id %>/workouts/<%= workout._id %>/edit">
-          Edit Workout
-        </a> 
-      </div>
-
-      <div> 
-   <form action="/users/<%= user._id %>/workouts/<%= workout._id %>?_method=DELETE" method="POST">
-  </div>
-    <button type="submit">Delete Workout </button>
-  </form>
-
+        <a href="/users/<%= user._id %>/workouts/<%= workout._id %>/edit">Edit Workout</a>
+        <form action="/users/<%= user._id %>/workouts/<%= workout._id %>?_method=DELETE" method="POST">
+          <button type="submit">Delete Workout</button>
+        </form>
+      </section>
+      <section class="image-section">
+        <img
+          src="https://www.pngkey.com/png/full/256-2561718_want-to-learn-how-to-2x-your-muscle.png"
+          alt="<%= workout.workoutType %> Health Booster Logo"
+        />
+      </section>
+    </main>
   </body>
 </html>

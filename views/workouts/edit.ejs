@@ -3,58 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edit</title>
+    <title>Edit Workout</title>
+    <link rel="stylesheet" href="/styles/edit.css" />
   </head>
-  <body>
+  <body class="edit-workout-page">
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Edit <%= workout.workoutType %> Workout Form</h1>
-    <form action="/users/<%=user._id%>/workouts/<%= workout._id %>?_method=PUT" method= "POST"?>
+    <main class="edit-workout-container">
+      <section class="text-section">
+        <h1>Edit Workout</h1>
+       <form action="/users/<%=user._id%>/workouts/<%= workout._id %>?_method=PUT" method= "POST"?>
+          <div>
+            <label for="workoutType">Workout Type</label>
+            <select name="workoutType" id="workoutType" required>
+              <option value="">Select a workout Type</option>
+              <option value="Running">Running</option>
+              <option value="Weightlifting">Weightlifting</option>
+              <option value="Cycling">Cycling</option>
+            </select>
+          </div>
 
-    <div>
-      <label for="workoutType">Workout Type</label>
-      <select name="workoutType" id="workoutType" required>
-        <option value="">Select a workout Type</option>
-        <option value="Running">Running</option>
-        <option value="Weightlifting">Weightlifting</option>
-        <option value="Cycling">Cycling</option>  value="<%= workout.workoutType %>"
-      </select>
-    </div>
+          <div>
+            <label for="workoutDescription">Description</label>
+            <textarea
+              name="workoutDescription"
+              id="workoutDescription"
+              required
+            ></textarea>
+          </div>
 
-    <div>
-      <label for="workoutDescription">Description</label>
-      <textarea name="workoutDescription"id="workoutDescription"required>  </textarea> value="<%= workout.workoutDescription %>"
-    </div>
+          <div>
+            <label for="workoutDuration">Duration (minutes)</label>
+            <select name="workoutDuration" id="workoutDuration" required>
+              <option value="">Select duration</option>
+              <option value="5">5 minutes</option>
+              <option value="10">10 minutes</option>
+              <option value="15">15 minutes</option>
+              <option value="20">20 minutes</option>
+              <option value="25">25 minutes</option>
+              <option value="30">30 minutes</option>
+              <option value="35">35 minutes</option>
+              <option value="40">40 minutes</option>
+              <option value="45">45 minutes</option>
+              <option value="50">50 minutes</option>
+              <option value="55">55 minutes</option>
+              <option value="60">60 minutes</option>
+            </select>
+          </div>
 
-    <div>
-        <label for="workoutDuration">Duration (minutes)</label>
-        <select name="workoutDuration" id="workoutDuration" required>
-          <option value="">Select duration</option>
-          <option value="5">5 minutes</option>
-          <option value="10">10 minutes</option>
-          <option value="15">15 minutes</option>
-          <option value="20">20 minutes</option>
-          <option value="25">25 minutes</option>
-          <option value="30">30 minutes</option>
-          <option value="35">35 minutes</option>
-          <option value="40">40 minutes</option>
-          <option value="45">45 minutes</option>
-          <option value="50">50 minutes</option>
-          <option value="55">55 minutes</option>
-          <option value="60">60 minutes</option>
-        </select>
-      </div>
+          <div>
+            <label for="postingLink">Link to workout video:</label>
+            <input type="text" name="postingLink" id="postingLink" required />
+          </div>
 
-    <div>
-      <label for="postingLink">Link to workout video:</label>
-      <input type="text" name="postingLink" id="postingLink" required /> value="<%= workout.postingLink %>"
-    </div>
+          <div>
+            <label for="workoutDate">Workout Date</label>
+            <input type="datetime-local" id="workoutDate" name="workoutDate" />
+          </div>
 
-    <div>
-      <label for="workoutDate">Workout Date</label>
-      <input type="datetime-local" id="workoutDate" name="workoutDate" />
-    </div>
-
-    <button type="submit">Edit Workout</button>
-    </form>
+          <button type="submit">Edit Workout</button>
+        </form>
+      </section>
+      <section class="image-section">
+        <img
+          src="https://wpassets.trainingpeaks.com/wp-content/uploads/2014/12/21135751/22541_TPblog_1200.2.jpg"
+          alt="Running Image"
+        />
+      </section>
+    </main>
   </body>
 </html>

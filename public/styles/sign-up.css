@@ -2,22 +2,26 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #3936366d; /* Dark background */
+    background-color: #3936366d; 
     color: #0d0000; 
 }
 
 a {
-    color: #1e90ff;
-    text-decoration: none;
-}
-
-a:hover, a:focus {
+    color: #000000; 
+    text-decoration: underline; 
+    font-weight: bold; 
+    margin-right: 20px; 
+  }
+  
+  a:hover,
+  a:focus {
+    color: #333333;
     text-decoration: underline;
 }
 
 button {
     background-color: #f39c12;
-    color: #000000; /* Black text for the button */
+    color: #000000; 
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -57,7 +61,7 @@ button:focus {
     font-size: 2rem;
     margin-bottom: 20px;
     text-align: center;
-    color: #f39c12; /* Gold color for the "Create a New Account" heading */
+    color: #f39c12; 
 }
 
 form {
@@ -69,7 +73,7 @@ form {
 label {
     font-size: 1rem;
     margin-bottom: 5px;
-    color: #f39c12; /* Gold color for labels */
+    color: #f39c12; 
 }
 
 input {
@@ -77,11 +81,11 @@ input {
     border: 1px solid #444444;
     border-radius: 5px;
     background-color: #2c2c2c;
-    color: #f39c12; /* Gold color for input text */
+    color: #f39c12; 
 }
 
 input::placeholder {
-    color: #f39c12; /* Gold color for placeholder text */
+    color: #f39c12; 
 }
 
 input:focus {

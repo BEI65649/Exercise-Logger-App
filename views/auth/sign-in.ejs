@@ -7,10 +7,9 @@
   <link rel="stylesheet" href="/styles/sign-in.css">
 </head>
 <body class="sign-in-page">
-  <!-- <%- include('../partials/_navbar.ejs') %> -->
+  <%- include('../partials/_navbar.ejs') %>
   <main class="sign-in-container">
     <section class="form-section">
-      <h1>Sign In</h1>
       <form action="/auth/sign-in" method="POST">
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" required />
@@ -20,7 +19,7 @@
       </form>
     </section>
     <section class="image-section">
-      <img src="https://www.pngkey.com/png/full/256-2561718_want-to-learn-how-to-2x-your-muscle.png" alt="Sign In Illustration">
+      <img src="https://www.pngkey.com/png/full/256-2561718_want-to-learn-how-to-2x-your-muscle.png" alt="Health Booster Logo">
     </section>
   </main>
 </body>

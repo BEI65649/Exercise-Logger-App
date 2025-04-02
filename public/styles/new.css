@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3936366d; 
+    color: #0d0000; 
+  }
+  
+  a {
+    color: #000000; 
+    text-decoration: underline; 
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+  a:hover,
+  a:focus {
+    color: #333333;
+    text-decoration: underline;
+  }
+  
+  button {
+    background-color: #000000; 
+    color: #ffffff; 
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #333333; 
+  }
+  
+  button:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+  }
+  
+
+  .new-workout-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    gap: 40px;
+  }
+  
+  .text-section {
+    flex: 1 1 400px;
+    max-width: 400px;
+  }
+  
+  .text-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000000; 
+    text-align: center;
+  }
+  
+  .text-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000000; 
+  }
+  
+  .text-section input,
+  .text-section select,
+  .text-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc; 
+    border-radius: 5px;
+    background-color: #ffffff; 
+    color: #000000; 
+  }
+  
+  .text-section textarea {
+    resize: vertical;
+  }
+  
+  .text-section input:focus,
+  .text-section select:focus,
+  .text-section textarea:focus {
+    outline: 2px solid #1e90ff; 
+  }
+  
+
+  .image-section {
+    flex: 1 1 400px;
+    max-width: 600px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+  }
+  
+  .image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  @media (max-width: 768px) {
+    .new-workout-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .text-section,
+    .image-section {
+      max-width: 100%;
+    }
+  }

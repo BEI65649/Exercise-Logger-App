@@ -7,12 +7,17 @@ body {
 }
 
 a {
-    color: #1e90ff;
-    text-decoration: none;
+    color: #000000; 
+    text-decoration: underline; 
+    font-weight: bold;
+    margin-right: 20px;
 }
 
 a:hover, a:focus {
+    color: #333333; 
     text-decoration: underline;
+    outline: 2px solid #f39c12; 
+    outline-offset: 2px;
 }
 
 button {
@@ -34,11 +39,12 @@ button:focus {
     outline-offset: 2px;
 }
 
-.home-container {
+
+.index-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
     padding: 20px;
     gap: 40px;
@@ -47,25 +53,65 @@ button:focus {
 .text-section {
     flex: 1 1 400px;
     max-width: 400px;
-    text-align: center;
 }
 
 .text-section h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-}
-
-.text-section p {
-    font-size: 1.2rem;
     color: #000000; 
 }
 
+.text-section .add-workout-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    background-color: #000000; 
+    color: #ffffff; 
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.text-section .add-workout-btn:hover {
+    background-color: #333333; 
+}
+
+.workouts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.workout-item {
+    margin-bottom: 15px; 
+    padding: 10px; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    max-width: 350px; 
+}
+
+.workout-item h2 {
+    font-size: 1.2rem; 
+    margin-bottom: 8px;
+    color: #f39c12; 
+}
+
+.workout-item p {
+    font-size: 0.9rem; 
+    color: #000000; 
+}
+
+
+
 .image-section {
     flex: 1 1 400px;
-    max-width: 400px;
+    max-width: 600px; 
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 250px; 
 }
 
 .image-section img {
@@ -75,8 +121,9 @@ button:focus {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+
 @media (max-width: 768px) {
-    .home-container {
+    .index-container {
         flex-direction: column;
         gap: 20px;
     }
@@ -84,30 +131,4 @@ button:focus {
     .text-section, .image-section {
         max-width: 100%;
     }
-}
-
-nav {
-    display: flex; 
-    justify-content: flex-start; 
-    gap: 20px; 
-    padding: 10px 20px; 
-    background-color: transparent; 
-    position: absolute; 
-    top: 0;
-    left: 0;
-    width: 100%; 
-}
-
-nav a {
-    color: #000000; 
-    text-decoration: underline; 
-    font-weight: bold; 
-    font-size: 1rem; 
-}
-
-nav a:hover, nav a:focus {
-    color: #333333; 
-    text-decoration: underline; 
-    outline: 2px solid #f39c12; 
-    outline-offset: 2px;
 }

@@ -7,7 +7,7 @@ const User = require('../models/user.js');
 
 
 
-//index route
+
 router.get('/', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id);
@@ -21,12 +21,12 @@ router.get('/', async (req, res) => {
     }); 
 
 
-// New workout route
+
   router.get('/new', async (req, res) => {
     res.render('workouts/new.ejs');
   });
 
-  // Create workout route
+
 router.post('/', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id);
@@ -39,7 +39,7 @@ router.post('/', async (req, res) => {
     }
 });
   
-// Show workout route
+
 router.get('/:workoutId', async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
@@ -53,7 +53,7 @@ router.get('/:workoutId', async (req, res) => {
   }
 });
 
-// Delete workout route
+
 router.delete('/:workoutId', async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
@@ -80,7 +80,6 @@ router.get('/:workoutId/edit', async (req, res) => {
 });
 
 
-// Update workout route
 router.put('/:workoutId', async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
