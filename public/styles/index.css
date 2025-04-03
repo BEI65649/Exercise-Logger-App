@@ -104,6 +104,19 @@ button:focus {
 }
 
 
+.workout-item {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center; 
+    height: 200px;
+    position: relative; 
+}
+
+.workout-item a {
+    margin-top: auto; 
+    text-align: center; 
+}
 
 .image-section {
     flex: 1 1 400px;
@@ -131,4 +144,28 @@ button:focus {
     .text-section, .image-section {
         max-width: 100%;
     }
+}
+
+.navbar {
+    padding: 10px 20px; 
+    background-color: #f8f9fa; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    margin-right: 10px; 
+}
+
+.navbar a:last-child {
+    margin-right: 0; 
+}
+
+.navbar a:hover {
+    text-decoration: underline; 
+    color: #333333; 
 }

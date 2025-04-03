@@ -111,3 +111,18 @@ nav a:hover, nav a:focus {
     outline: 2px solid #f39c12; 
     outline-offset: 2px;
 }
+
+.navbar {
+    padding: 10px 20px; 
+    background-color: #f8f9fa; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 10px; 
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}

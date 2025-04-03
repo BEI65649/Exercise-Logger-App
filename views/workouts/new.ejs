@@ -11,7 +11,7 @@
     <main class="new-workout-container">
       <section class="text-section">
         <h1>Add a New Workout</h1>
-        <form action="/users/<%= user._id %>/workouts" method="POST">
+        <form action="/users/<%=user._id%>/workouts" method= "POST">
           <div>
             <label for="workoutType">Workout Type</label>
             <select name="workoutType" id="workoutType" required>
@@ -60,7 +60,7 @@
             <input type="datetime-local" id="workoutDate" name="workoutDate" />
           </div>
 
-          <button type="submit">Add Workout</button>
+          <button class="add-button">Add Workout</button>
         </form>
       </section>
       <section class="image-section">

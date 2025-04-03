@@ -119,3 +119,34 @@ body {
       max-width: 100%;
     }
   }
+
+  .navbar {
+    padding: 10px 20px; 
+    background-color: #f8f9fa; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    margin-right: 10px; 
+}
+
+.navbar a:last-child {
+    margin-right: 0; 
+}
+
+.navbar a:hover {
+    text-decoration: underline; 
+    color: #333333; 
+}
+
+button:hover {
+  border: 2px solid #f39c12; 
+  background-color: #333333; 
+  color: #ffffff;
+  cursor: pointer; 
+}

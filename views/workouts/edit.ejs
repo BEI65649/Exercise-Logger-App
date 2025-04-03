@@ -10,25 +10,22 @@
     <%- include('../partials/_navbar.ejs') %>
     <main class="edit-workout-container">
       <section class="text-section">
-        <h1>Edit Workout</h1>
+        <h1>Edit <%= workout.workoutType %> Workout Form</h1>
        <form action="/users/<%=user._id%>/workouts/<%= workout._id %>?_method=PUT" method= "POST"?>
           <div>
             <label for="workoutType">Workout Type</label>
-            <select name="workoutType" id="workoutType" required>
-              <option value="">Select a workout Type</option>
-              <option value="Running">Running</option>
-              <option value="Weightlifting">Weightlifting</option>
-              <option value="Cycling">Cycling</option>
+            <select name="workoutType" id="workoutType" required> 
+              <option value="">Select a workout Type</option> 
+              <option <%= workout.workoutType === 'Running' ? 'selected': '' %> value="Running">Running </option>
+              <option <%= workout.workoutType === 'Weightlifting' ? 'selected': '' %> value="Weightlifting">Weightlifting </option>
+              <option <%= workout.workoutType === 'Cycling' ? 'selected': '' %> value="Cycling">Cycling</option>
             </select>
           </div>
+    
 
           <div>
             <label for="workoutDescription">Description</label>
-            <textarea
-              name="workoutDescription"
-              id="workoutDescription"
-              required
-            ></textarea>
+            <textarea name="workoutDescription" id="workoutDescription"required ><%= workout.workoutDescription%></textarea>
           </div>
 
           <div>
@@ -38,9 +35,9 @@
               <option value="5">5 minutes</option>
               <option value="10">10 minutes</option>
               <option value="15">15 minutes</option>
-              <option value="20">20 minutes</option>
-              <option value="25">25 minutes</option>
-              <option value="30">30 minutes</option>
+              <option <%= workout.workoutDuration === 20 ? 'selected': '' %> value='20'>20 minutes</option>
+              <option <%= workout.workoutDuration === 25 ? 'selected': '' %> value='25'>25 minutes</option>
+              <option <%= workout.workoutDuration === 30 ? 'selected': '' %> value='30'>30 minutes</option>
               <option value="35">35 minutes</option>
               <option value="40">40 minutes</option>
               <option value="45">45 minutes</option>
@@ -52,15 +49,15 @@
 
           <div>
             <label for="postingLink">Link to workout video:</label>
-            <input type="text" name="postingLink" id="postingLink" required />
+            <input type="text" name="postingLink" id="postingLink" value="<%= workout.postingLink %>" required />
           </div>
 
           <div>
             <label for="workoutDate">Workout Date</label>
-            <input type="datetime-local" id="workoutDate" name="workoutDate" />
+            <input type="datetime-local" id="workoutDate" name="workoutDate"<%= workout.workoutDate %> />
           </div>
 
-          <button type="submit">Edit Workout</button>
+          <button class ="edit=button">Edit Workout</button>
         </form>
       </section>
       <section class="image-section">

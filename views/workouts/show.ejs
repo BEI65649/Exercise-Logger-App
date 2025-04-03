@@ -26,7 +26,7 @@
 
         <a href="/users/<%= user._id %>/workouts/<%= workout._id %>/edit">Edit Workout</a>
         <form action="/users/<%= user._id %>/workouts/<%= workout._id %>?_method=DELETE" method="POST">
-          <button type="submit">Delete Workout</button>
+          <button class="delete-button">Delete Workout</button>
         </form>
       </section>
       <section class="image-section">
