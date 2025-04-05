@@ -1,4 +1,5 @@
 Logo:
+![Workout Logger Logo](https://www.pngkey.com/png/full/256-2561718_want-to-learn-how-to-2x-your-muscle.png "Workout Logger Logo")
 ![alt text](<Screenshot 2025-04-03 at 5.35.12 PM.png>)
 
 Description of the app and its functionality: 
