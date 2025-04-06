@@ -32,18 +32,18 @@
             <label for="workoutDuration">Duration (minutes)</label>
             <select name="workoutDuration" id="workoutDuration" required>
               <option value="">Select duration</option>
-              <option value="5">5 minutes</option>
-              <option value="10">10 minutes</option>
-              <option value="15">15 minutes</option>
+              <option <%= workout.workoutDuration === 5 ? 'selected': '' %> value='5'>5 minutes</option>
+              <option <%= workout.workoutDuration === 10 ? 'selected': '' %> value='10'>10 minutes</option>
+              <option <%= workout.workoutDuration === 15 ? 'selected': '' %> value='15'>15 minutes</option>
               <option <%= workout.workoutDuration === 20 ? 'selected': '' %> value='20'>20 minutes</option>
               <option <%= workout.workoutDuration === 25 ? 'selected': '' %> value='25'>25 minutes</option>
               <option <%= workout.workoutDuration === 30 ? 'selected': '' %> value='30'>30 minutes</option>
-              <option value="35">35 minutes</option>
-              <option value="40">40 minutes</option>
-              <option value="45">45 minutes</option>
-              <option value="50">50 minutes</option>
-              <option value="55">55 minutes</option>
-              <option value="60">60 minutes</option>
+              <option <%= workout.workoutDuration === 35 ? 'selected': '' %> value='35'>35 minutes</option>
+              <option <%= workout.workoutDuration === 40 ? 'selected': '' %> value='40'>40 minutes</option>
+              <option <%= workout.workoutDuration === 45 ? 'selected': '' %> value='45'>45 minutes</option>
+              <option <%= workout.workoutDuration === 50 ? 'selected': '' %> value='50'>50 minutes</option>
+              <option <%= workout.workoutDuration === 55 ? 'selected': '' %> value='55'>55 minutes</option>
+              <option <%= workout.workoutDuration === 60 ? 'selected': '' %> value='60'>60 minutes</option>
             </select>
           </div>
 

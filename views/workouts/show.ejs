@@ -13,19 +13,21 @@
         <h1><%= workout.workoutType %> Workout</h1>
         <p><%= workout.date.toDateString() %></p>
         <p><%= workout.workoutDuration %> minutes</p>
-       
 
         <% if (workout.workoutDescription) { %>
-          <h3>Workout Notes:</h3>
-          <p><%= workout.workoutDescription %></p>
+        <h3>Workout Notes:</h3>
+        <p><%= workout.workoutDescription %></p>
+        <% } %> <% if (workout.postingLink) { %>
+        <a href="<%= workout.postingLink %>" target="_blank">View Video</a>
         <% } %>
 
-        <% if (workout.postingLink) { %>
-          <a href="<%= workout.postingLink %>" target="_blank">View Video</a>
-        <% } %>
-
-        <a href="/users/<%= user._id %>/workouts/<%= workout._id %>/edit">Edit Workout</a>
-        <form action="/users/<%= user._id %>/workouts/<%= workout._id %>?_method=DELETE" method="POST">
+        <a href="/users/<%= user._id %>/workouts/<%= workout._id %>/edit"
+          >Edit Workout</a
+        >
+        <form
+          action="/users/<%= user._id %>/workouts/<%= workout._id %>?_method=DELETE"
+          method="POST"
+        >
           <button class="delete-button">Delete Workout</button>
         </form>
       </section>
