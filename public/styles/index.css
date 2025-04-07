@@ -1,171 +1,170 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #3936366d; 
-    color: #0d0000; 
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #3936366d;
+  color: #0d0000;
 }
 
 a {
-    color: #000000; 
-    text-decoration: underline; 
-    font-weight: bold;
-    margin-right: 20px;
+  color: #000000;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-right: 20px;
 }
 
-a:hover, a:focus {
-    color: #333333; 
-    text-decoration: underline;
-    outline: 2px solid #f39c12; 
-    outline-offset: 2px;
+a:hover,
+a:focus {
+  color: #333333;
+  text-decoration: underline;
+  outline: 2px solid #f39c12;
+  outline-offset: 2px;
 }
 
 button {
-    background-color: #000000; 
-    color: #ffffff; 
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 button:hover {
-    background-color: #333333; 
+  background-color: #333333;
 }
 
 button:focus {
-    outline: 2px solid #ffffff;
-    outline-offset: 2px;
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
 }
 
-
 .index-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding: 20px;
-    gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  gap: 40px;
 }
 
 .text-section {
-    flex: 1 1 400px;
-    max-width: 400px;
+  flex: 1 1 400px;
+  max-width: 400px;
 }
 
 .text-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #000000; 
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #000000;
 }
 
 .text-section .add-workout-btn {
-    display: inline-block;
-    margin-bottom: 20px;
-    background-color: #000000; 
-    color: #ffffff; 
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
+  display: inline-block;
+  margin-bottom: 20px;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .text-section .add-workout-btn:hover {
-    background-color: #333333; 
+  background-color: #333333;
 }
 
 .workouts-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .workout-item {
-    margin-bottom: 15px; 
-    padding: 10px; 
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    max-width: 350px; 
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
 }
 
 .workout-item h2 {
-    font-size: 1.2rem; 
-    margin-bottom: 8px;
-    color: #f39c12; 
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #f39c12;
 }
 
 .workout-item p {
-    font-size: 0.9rem; 
-    color: #000000; 
+  font-size: 0.9rem;
+  color: #000000;
 }
 
-
 .workout-item {
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-between; 
-    align-items: center; 
-    height: 200px;
-    position: relative; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+  position: relative;
 }
 
 .workout-item a {
-    margin-top: auto; 
-    text-align: center; 
+  margin-top: auto;
+  text-align: center;
 }
 
 .image-section {
-    flex: 1 1 400px;
-    max-width: 600px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 250px; 
+  flex: 1 1 400px;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 250px;
 }
 
 .image-section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-
 @media (max-width: 768px) {
-    .index-container {
-        flex-direction: column;
-        gap: 20px;
-    }
+  .index-container {
+    flex-direction: column;
+    gap: 20px;
+  }
 
-    .text-section, .image-section {
-        max-width: 100%;
-    }
+  .text-section,
+  .image-section {
+    max-width: 100%;
+  }
 }
 
 .navbar {
-    padding: 10px 20px; 
-    background-color: #f8f9fa; 
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; 
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .navbar a {
-    text-decoration: none;
-    color: #000000;
-    font-weight: bold;
-    margin-right: 10px; 
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
 .navbar a:last-child {
-    margin-right: 0; 
+  margin-right: 0;
 }
 
 .navbar a:hover {
-    text-decoration: underline; 
-    color: #333333; 
+  text-decoration: underline;
+  color: #333333;
 }

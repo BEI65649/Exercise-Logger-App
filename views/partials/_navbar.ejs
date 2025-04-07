@@ -1,6 +1,6 @@
 <nav class="navbar">
   <% if (user) { %>
-    <a href="/users/<%= user._id %>/workouts">User Workouts</a>
+    <a href="/users/<%= user._id %>/workouts">Your Workouts</a>
     <a href="/auth/sign-out">Sign Out</a>
   <% } else { %>
     <a href="/auth/sign-in">Sign In</a>

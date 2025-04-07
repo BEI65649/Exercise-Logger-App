@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Workouts</title>
+    <title>Your Workouts</title>
     <link rel="stylesheet" href="/styles/index.css">
 </head>
 <body class="index-page">
     <%- include('../partials/_navbar.ejs') %> 
     <main class="index-container">
         <section class="text-section">
-            <h1 class="page-title">User Workouts</h1>
+            <h1 class="page-title">Your Workouts</h1>
             <a href="/users/<%= user._id %>/workouts/new" class="add-workout-btn">Add a Workout</a>
             <ul class="workouts-list">
                 <% workouts.forEach(workout => { %>
