@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const workoutSchema = new mongoose.Schema({
- 
   workoutType: {
     type: String,
     required: true,
@@ -42,10 +41,9 @@ const userSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-    workouts: [workoutSchema],
-
+  workouts: [workoutSchema],
 });
 
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model("User", userSchema);
 
 module.exports = User;
