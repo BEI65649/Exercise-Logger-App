@@ -13,7 +13,8 @@ https://trello.com/invite/b/67e5d78a95d462454feadf5b/ATTI845573a508d8d4077a31585
 
 Deployed link:
 
-GitHub link:
+GitHub link: https://github.com/BEI65649/Workout-Logger-App
+
 
 
 Technologies: 
