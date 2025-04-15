@@ -11,7 +11,8 @@ I built this app, because when I was fresh out of college I couldn't afford gym 
 Planning material:
 https://trello.com/invite/b/67e5d78a95d462454feadf5b/ATTI845573a508d8d4077a31585c3c859ed510E3DD24/ga-project-2-men-crud-fs
 
-Deployed link:
+Deployed link: https://workout-logger-app-brad-dae9edd6d1e8.herokuapp.com/
+
 
 GitHub link: https://github.com/BEI65649/Workout-Logger-App
 
